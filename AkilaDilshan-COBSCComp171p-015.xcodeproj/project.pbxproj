@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		982027807021945AAA752DC5 /* Pods_AkilaDilshan_COBSCComp171p_015.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8EDF69CD85515E7B342C8F3 /* Pods_AkilaDilshan_COBSCComp171p_015.framework */; };
 		E446C8C02281476600D5A15D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446C8BF2281476600D5A15D /* AppDelegate.swift */; };
 		E446C8C22281476600D5A15D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446C8C12281476600D5A15D /* ViewController.swift */; };
 		E446C8C52281476600D5A15D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E446C8C32281476600D5A15D /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D5343B04C4161FCC6DB0578 /* Pods-AkilaDilshan-COBSCComp171p-015.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkilaDilshan-COBSCComp171p-015.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AkilaDilshan-COBSCComp171p-015/Pods-AkilaDilshan-COBSCComp171p-015.debug.xcconfig"; sourceTree = "<group>"; };
+		86E366E9F04C56EA4819BF9E /* Pods-AkilaDilshan-COBSCComp171p-015.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AkilaDilshan-COBSCComp171p-015.release.xcconfig"; path = "Pods/Target Support Files/Pods-AkilaDilshan-COBSCComp171p-015/Pods-AkilaDilshan-COBSCComp171p-015.release.xcconfig"; sourceTree = "<group>"; };
+		C8EDF69CD85515E7B342C8F3 /* Pods_AkilaDilshan_COBSCComp171p_015.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AkilaDilshan_COBSCComp171p_015.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E446C8BC2281476600D5A15D /* AkilaDilshan-COBSCComp171p-015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AkilaDilshan-COBSCComp171p-015.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E446C8BF2281476600D5A15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E446C8C12281476600D5A15D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				982027807021945AAA752DC5 /* Pods_AkilaDilshan_COBSCComp171p_015.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AC6E803EE87A4FA46A48ACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8EDF69CD85515E7B342C8F3 /* Pods_AkilaDilshan_COBSCComp171p_015.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89F05F047C8C0300F9C4FF92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D5343B04C4161FCC6DB0578 /* Pods-AkilaDilshan-COBSCComp171p-015.debug.xcconfig */,
+				86E366E9F04C56EA4819BF9E /* Pods-AkilaDilshan-COBSCComp171p-015.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E446C8B32281476600D5A15D = {
 			isa = PBXGroup;
 			children = (
 				E446C8BE2281476600D5A15D /* AkilaDilshan-COBSCComp171p-015 */,
 				E446C8BD2281476600D5A15D /* Products */,
+				89F05F047C8C0300F9C4FF92 /* Pods */,
+				7AC6E803EE87A4FA46A48ACA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E446C8CE2281476700D5A15D /* Build configuration list for PBXNativeTarget "AkilaDilshan-COBSCComp171p-015" */;
 			buildPhases = (
+				BB986DB67F4F34ACC25C70C7 /* [CP] Check Pods Manifest.lock */,
 				E446C8B82281476600D5A15D /* Sources */,
 				E446C8B92281476600D5A15D /* Frameworks */,
 				E446C8BA2281476600D5A15D /* Resources */,
+				BF8077C67F2DE77730855593 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB986DB67F4F34ACC25C70C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AkilaDilshan-COBSCComp171p-015-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF8077C67F2DE77730855593 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AkilaDilshan-COBSCComp171p-015/Pods-AkilaDilshan-COBSCComp171p-015-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AkilaDilshan-COBSCComp171p-015/Pods-AkilaDilshan-COBSCComp171p-015-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E446C8B82281476600D5A15D /* Sources */ = {
@@ -280,6 +353,7 @@
 		};
 		E446C8CF2281476700D5A15D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D5343B04C4161FCC6DB0578 /* Pods-AkilaDilshan-COBSCComp171p-015.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +373,7 @@
 		};
 		E446C8D02281476700D5A15D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86E366E9F04C56EA4819BF9E /* Pods-AkilaDilshan-COBSCComp171p-015.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

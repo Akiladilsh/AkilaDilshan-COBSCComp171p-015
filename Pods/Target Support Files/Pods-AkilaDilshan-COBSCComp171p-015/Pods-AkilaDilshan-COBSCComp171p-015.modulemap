@@ -1,0 +1,6 @@
+framework module Pods_AkilaDilshan_COBSCComp171p_015 {
+  umbrella header "Pods-AkilaDilshan-COBSCComp171p-015-umbrella.h"
+
+  export *
+  module * { export * }
+}
