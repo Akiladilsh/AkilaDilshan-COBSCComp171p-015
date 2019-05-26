@@ -574,6 +574,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="gmail:" destination="HOQ-DV-F3L" eventType="touchUpInside" id="SRZ-g5-BIV"/>
                                             <action selector="openMail:" destination="TYN-u9-Hy0" eventType="touchUpInside" id="i59-g8-rv3"/>
                                         </connections>
                                     </button>
@@ -589,6 +590,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="twitter:" destination="HOQ-DV-F3L" eventType="touchUpInside" id="uGH-EJ-0Ad"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7z-x1-4PX">
                                         <rect key="frame" x="134" y="0.0" width="40" height="40"/>
@@ -602,6 +606,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="faceBook:" destination="HOQ-DV-F3L" eventType="touchUpInside" id="v08-ml-SxI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

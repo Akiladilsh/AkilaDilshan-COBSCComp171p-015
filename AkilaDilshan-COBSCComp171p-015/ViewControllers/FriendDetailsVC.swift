@@ -21,6 +21,8 @@ class FriendDetailsVC: UIViewController {
     
     //MARK:- Variables
     var studentObject:Student! = nil
+    
+    var utill = Utill()
 
 
     override func viewDidLoad() {
@@ -46,4 +48,22 @@ class FriendDetailsVC: UIViewController {
     
     //MARK- UI Actions
 
+    @IBAction func faceBook(_ sender: Any) {
+        
+        
+        let fbURlWeb = URL(string: studentObject.facebookUrl)
+
+        UIApplication.shared.open(fbURlWeb!, options: [:], completionHandler: nil)
+ 
+    }
+    
+    @IBAction func gmail(_ sender: Any) {
+        
+        utill.showToast(message: studentObject.gmailUrl, view: view, width: 350)
+    }
+    
+    @IBAction func twitter(_ sender: Any) {
+        
+        utill.showToast(message: studentObject.twitterUrl, view: view, width: 350)
+    }
 }
