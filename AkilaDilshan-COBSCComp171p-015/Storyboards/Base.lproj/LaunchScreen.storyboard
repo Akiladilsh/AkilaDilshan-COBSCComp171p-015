@@ -17,7 +17,36 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1" translatesAutoresizingMaskIntoConstraints="NO" id="kKN-Pp-8ja">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2HE-iD-kVf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="National_Institute_of_Business_Management_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="1qy-Iw-dWT">
+                                <rect key="frame" x="37.5" y="170" width="300" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="X2R-wl-dGV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIBM Connect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="647-S9-dtt">
+                                <rect key="frame" x="67" y="324" width="241.5" height="42"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.029614653439999999" green="0.71246963740000002" blue="0.99999099970000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kKN-Pp-8ja" secondAttribute="trailing" id="MxM-uc-4zS"/>
+                            <constraint firstAttribute="bottom" secondItem="kKN-Pp-8ja" secondAttribute="bottom" id="QMO-Is-t2T"/>
+                            <constraint firstItem="kKN-Pp-8ja" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SJP-Ts-JmS"/>
+                            <constraint firstItem="1qy-Iw-dWT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="YhI-6E-KVk"/>
+                            <constraint firstItem="647-S9-dtt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YrP-wh-Sxm"/>
+                            <constraint firstItem="647-S9-dtt" firstAttribute="top" secondItem="1qy-Iw-dWT" secondAttribute="bottom" constant="26" id="esc-gb-WiA"/>
+                            <constraint firstItem="1qy-Iw-dWT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vKf-w6-4c7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +55,8 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="National_Institute_of_Business_Management_Logo" width="300" height="172"/>
+        <image name="back1" width="1920" height="986"/>
+    </resources>
 </document>

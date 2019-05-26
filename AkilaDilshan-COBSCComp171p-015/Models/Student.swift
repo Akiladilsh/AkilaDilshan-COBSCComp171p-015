@@ -14,6 +14,7 @@ class Student {
     var fName:String
     var lName:String
     var city:String
+    var pf:String
     var gmailUrl:String
     var facebookUrl:String
     var phoneNum:String
@@ -21,12 +22,13 @@ class Student {
     var birthday:String
     var age:Int
     
-    init(id:String, fName:String, lName:String, city:String, gmailUrl:String, facebookUrl:String, phoneNum:String,twitterUrl:String, birthday:String, age:Int) {
+    init(id:String, fName:String, lName:String, city:String, gmailUrl:String, facebookUrl:String, phoneNum:String,twitterUrl:String, birthday:String, age:Int, pf:String) {
         
         self.id = id
         self.fName = fName
         self.lName = lName
         self.city = city
+        self.pf = pf
         self.gmailUrl = gmailUrl
         self.facebookUrl = facebookUrl
         self.phoneNum = phoneNum

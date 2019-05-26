@@ -31,6 +31,8 @@ class FriendTVC: UITableViewCell {
     
     func setupTableCell(firstName:String, lastName:String, cityName:String, picUrl:String)  {
         
+        let imageUrl = URL(string: picUrl)
+        self.profileImageView.kf.setImage(with: imageUrl)
         self.fullNameLabel.text  = "\(firstName) \(lastName)"
         self.cityNameLabel.text = cityName
     }

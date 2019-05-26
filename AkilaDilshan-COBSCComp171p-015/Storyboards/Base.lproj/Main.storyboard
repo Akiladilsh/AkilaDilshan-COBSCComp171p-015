@@ -92,7 +92,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="2qE-5w-fhR">
-                                <rect key="frame" x="100.5" y="540" width="174" height="40"/>
+                                <rect key="frame" x="134" y="540" width="107" height="40"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBk-GW-R7h">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -110,21 +110,8 @@
                                             <action selector="googleSignIn:" destination="qKp-1d-aID" eventType="touchUpInside" id="Vs9-rU-mnE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upn-l4-Bxu">
-                                        <rect key="frame" x="67" y="0.0" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="WPa-0e-Jrl"/>
-                                            <constraint firstAttribute="height" constant="40" id="mHJ-fb-ZfP"/>
-                                        </constraints>
-                                        <state key="normal" image="twitter"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWs-he-8OU">
-                                        <rect key="frame" x="134" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="67" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="aa1-Gc-Qey"/>
                                             <constraint firstAttribute="height" constant="40" id="owm-wz-5nA"/>
@@ -326,7 +313,6 @@
         <image name="coventry" width="667" height="462"/>
         <image name="facebook" width="171" height="171"/>
         <image name="google" width="171" height="171"/>
-        <image name="twitter" width="171" height="171"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gC7-aE-F2t"/>

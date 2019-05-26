@@ -12,7 +12,6 @@ target 'AkilaDilshan-COBSCComp171p-015' do
   pod 'GoogleSignIn'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
-  pod 'TwitterKit'
 
   
   # Pods for AkilaDilshan-COBSCComp171p-015

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FriendDetailsVC: UIViewController {
     
@@ -33,6 +34,8 @@ class FriendDetailsVC: UIViewController {
     
     func setupLayout(){
         
+    let url = URL(string: studentObject.pf)
+    imageView.kf.setImage(with: url)
     nameLabel.text = studentObject.fName + " " + studentObject.lName
     birthdayLabel.text = studentObject.birthday
     ageLabel.text = "\(studentObject.age)"

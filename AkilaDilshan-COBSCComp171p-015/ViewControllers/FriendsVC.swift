@@ -61,7 +61,7 @@ class FriendsVC: UIViewController {
                 for student in snapshot.children.allObjects as! [DataSnapshot]{
                     
                     let studentObject = student.value as? [String:AnyObject]
-                    let student = Student(id: studentObject!["id"] as! String, fName: studentObject!["fName"] as! String, lName: studentObject!["lName"] as! String, city: studentObject!["city"] as! String, gmailUrl: studentObject!["gmail"] as! String, facebookUrl: studentObject!["facebook"] as! String, phoneNum: studentObject!["phoneNum"] as! String, twitterUrl: studentObject!["twitter"] as! String, birthday: studentObject!["birthday"] as! String, age: studentObject!["age"] as! Int)
+                    let student = Student(id: studentObject!["id"] as! String, fName: studentObject!["fName"] as! String, lName: studentObject!["lName"] as! String, city: studentObject!["city"] as! String, gmailUrl: studentObject!["gmail"] as! String, facebookUrl: studentObject!["facebook"] as! String, phoneNum: studentObject!["phoneNum"] as! String, twitterUrl: studentObject!["twitter"] as! String, birthday: studentObject!["birthday"] as! String, age: studentObject!["age"] as! Int, pf: studentObject!["pf"] as! String)
                     
                     students.append(student)
                 }
@@ -112,7 +112,9 @@ extension FriendsVC: UITableViewDelegate, UITableViewDataSource {
         
         let cell:FriendTVC = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as! FriendTVC
         
-        cell.setupTableCell(firstName: details.fName, lastName: details.lName, cityName: details.city, picUrl: "")
+        cell.selectionStyle = .none
+        
+        cell.setupTableCell(firstName: details.fName, lastName: details.lName, cityName: details.city, picUrl: details.pf)
         
         let bgColorView = UIView()
         bgColorView.backgroundColor = #colorLiteral(red: 0.08235294118, green: 0.1137254902, blue: 0.1803921569, alpha: 1)

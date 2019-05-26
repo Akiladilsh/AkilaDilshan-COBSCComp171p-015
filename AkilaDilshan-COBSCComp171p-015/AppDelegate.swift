@@ -11,7 +11,6 @@ import Firebase
 import IQKeyboardManager
 import GoogleSignIn
 import FBSDKCoreKit
-import TwitterKit
 
 
 @UIApplicationMain
@@ -27,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate = self
         
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-        TWTRTwitter.sharedInstance().start(withConsumerKey: Global.twitterKey, consumerSecret: Global.twitterSecretKey)
+        IQKeyboardManager.shared().isEnabled = true
         
         return true
     }
@@ -64,9 +63,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             let facebookDidHandle = ApplicationDelegate.shared.application(application, open: url, sourceApplication: options[.sourceApplication] as? String, annotation: options[.annotation])
             
-            let twitterDidHandle = TWTRTwitter.sharedInstance().application(application, open: url, options: options)
+
             
-            return googleDidHandle || facebookDidHandle || twitterDidHandle
+            return googleDidHandle || facebookDidHandle
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {

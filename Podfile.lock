@@ -89,9 +89,6 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - TwitterCore (3.2.0)
-  - TwitterKit (3.4.2):
-    - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit
@@ -102,7 +99,6 @@ DEPENDENCIES:
   - GoogleSignIn
   - IQKeyboardManager
   - Kingfisher (~> 5.0)
-  - TwitterKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -124,8 +120,6 @@ SPEC REPOS:
     - Kingfisher
     - leveldb-library
     - nanopb
-    - TwitterCore
-    - TwitterKit
 
 SPEC CHECKSUMS:
   FBSDKCoreKit: ba361d4a9d4dc29ff218822b849b22d4f869c7bb
@@ -146,9 +140,7 @@ SPEC CHECKSUMS:
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
-  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 1be1145650069a4713a6e8ab2282baea6859d2e8
+PODFILE CHECKSUM: 71066d28ea462247069ebac982eae63a6886dc1b
 
 COCOAPODS: 1.6.2
