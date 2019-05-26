@@ -30,6 +30,7 @@ class FriendsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //load friends indicator
         showIndicator()
         

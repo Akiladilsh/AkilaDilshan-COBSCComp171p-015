@@ -45,7 +45,7 @@ class LandingVC: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         Auth.auth().removeStateDidChangeListener(TempAppData.userHandle!)
     }

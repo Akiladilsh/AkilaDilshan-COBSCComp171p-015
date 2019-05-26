@@ -9,6 +9,11 @@ target 'AkilaDilshan-COBSCComp171p-015' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'GoogleSignIn'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+
+  
   # Pods for AkilaDilshan-COBSCComp171p-015
 
 end

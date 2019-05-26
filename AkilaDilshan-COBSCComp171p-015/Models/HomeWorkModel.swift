@@ -46,6 +46,39 @@ class HomeWork: Codable {
         
     }
     
+    public static func deleteHomeWork(deleteHomeWork:HomeWork){
+        
+        var retrivedHomeWorkArray:[HomeWork] = []
+        
+        if  let homeWorkData = UserDefaults.standard.data(forKey: "homeworkData"){
+            retrivedHomeWorkArray = try! JSONDecoder().decode([HomeWork].self, from: homeWorkData)
+        }
+        
+        for homeWork in retrivedHomeWorkArray{
+            
+            if ((homeWork.title == deleteHomeWork.title) && (homeWork.des == deleteHomeWork.des) && (homeWork.priority == deleteHomeWork.priority) ){
+                let indexOfhomeWork = retrivedHomeWorkArray.firstIndex{$0 === homeWork}
+                retrivedHomeWorkArray.remove(at: indexOfhomeWork!)
+                
+                var retrivedHomeWorkArrayData:[HomeWork] = []
+                
+                if  let homeWorkData = UserDefaults.standard.data(forKey: "homeworkData"){
+                    retrivedHomeWorkArrayData = try! JSONDecoder().decode([HomeWork].self, from: homeWorkData)
+                }
+                
+                if retrivedHomeWorkArrayData.count > retrivedHomeWorkArray.count {
+                    
+                    let homeWorkDat = try! JSONEncoder().encode(retrivedHomeWorkArray)
+                    UserDefaults.standard.set(homeWorkDat, forKey: "homeworkData")
+                }
+            }
+        }
+    }
+    
+
+    
+    
+    
     public static func getHomeWork() -> [HomeWork]? {
         
         var homeWorkArray:[HomeWork] = []

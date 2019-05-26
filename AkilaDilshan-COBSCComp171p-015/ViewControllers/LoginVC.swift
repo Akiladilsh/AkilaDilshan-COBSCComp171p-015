@@ -8,8 +8,16 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
+import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController,GIDSignInDelegate,GIDSignInUIDelegate,LoginButtonDelegate {
+   
+    
+   
+    
     
     //MARK:- UI Outlets
     @IBOutlet weak var usernameTextField: UITextField!
@@ -23,7 +31,10 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
         utill.setupTextFields(textFields: [usernameTextField, passwordTextField])
+        
 
     }
     
@@ -41,7 +52,6 @@ class LoginVC: UIViewController {
                    strongSelf.loginUser(userName: (self?.usernameTextField.text)!, pass: (self?.passwordTextField.text)!)
                     strongSelf.dismiss(animated: true, completion: nil)
                 })
-                
             }else{
                 
                 //show indicator
@@ -104,6 +114,8 @@ class LoginVC: UIViewController {
         self.view.sendSubviewToBack(self.loadingView)
     }
     
+  
+    
         //MARK:- UI Actions
     
     @IBAction func forgotPassTap(_ sender: Any) {
@@ -129,4 +141,86 @@ class LoginVC: UIViewController {
             loginUser(userName: usernameTextField.text!, pass: passwordTextField.text!)
         }
     }
+    
+    
+    @IBAction func googleSignIn(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    @IBAction func facebookLogin(_ sender: Any) {
+        
+        let fbLoginManager = LoginManager()
+        fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, err) in
+            
+            if let error = err {
+                print("Failed to login: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let accessToken = AccessToken.current else {
+                print("Failed to get access token")
+                return
+            }
+            
+            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+            
+            Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
+                if let error = error {
+                    print("Login error: \(error.localizedDescription)")
+                    self.popAlertView(title: "Error", des: error.localizedDescription, method: true, compl: {
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                    return
+                }
+                
+                print(user?.user.displayName)
+                 self.performSegue(withIdentifier: "gotoHome", sender: self)
+            }
+        }
+        
+    }
+}
+    
+  
+    
+
+
+extension LoginVC {
+    
+    
+    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!,
+              present viewController: UIViewController!) {
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+                     withError error: Error!) {
+        
+        if (error == nil) {
+            
+            _ = user.userID
+            _ = user.authentication.idToken
+            _ = user.profile.name
+            _ = user.profile.email
+            
+            self.performSegue(withIdentifier: "gotoHome", sender: self)
+            
+        } else {
+            print("\(String(describing: error))")
+        }
+    }
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        print(result)
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+        
+    }
+    
+    
 }

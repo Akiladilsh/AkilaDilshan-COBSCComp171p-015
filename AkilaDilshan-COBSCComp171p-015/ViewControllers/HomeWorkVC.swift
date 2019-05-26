@@ -103,10 +103,14 @@ extension HomeWorkVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
-            print("Delete Action Tapped")
+        
+         let homeWork = self.homeWorkArray[indexPath.row]
+            HomeWork.deleteHomeWork(deleteHomeWork: homeWork)
+            NotificationCenter.default.post(name: NSNotification.Name("recordAdded"), object: nil, userInfo:nil)
         }
         deleteAction.backgroundColor = .red
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+     
         return configuration
     }
     
