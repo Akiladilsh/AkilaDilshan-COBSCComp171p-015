@@ -10,4 +10,4 @@ Testuser@gmail.com
 123456 as password
 
 
-Alternatively you can use social logins as well facebook ang gmail 
+Alternatively you can use social logins as well facebook and gmail 
